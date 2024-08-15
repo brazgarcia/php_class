@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="with=device-with, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>
+        Nome da minha página
+    </title>
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <H1>Olá mundo!</H1>
+
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus illo quis fuga non expedita voluptate
+            provident quia amet nemo voluptatum, ipsam repellat architecto repellendus perspiciatis, distinctio eveniet
+            quaerat beatae accusantium?'
+        </p>
+
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor aperiam iure laborum praesentium non atque
+            dicta unde error laudantium deleniti modi, consequatur, corrupti porro facere voluptas vero. Beatae,
+            quae aliquid?
+        </p>
+
+        <button type="button" onclick="trocarTema()">Mudar o tema</button>
+    </div>
+
+    <script>
+        // Escreve um tema no console.
+        console.log("JavaScript foi lido");
+
+        // Cria uma variável e guarda o texto "claro" nela.
+        var tema = "claro";
+
+        // Cria uma função para mudar o tema da página.
+        function trocarTema() {
+
+            // Pega o body da página.
+            var body = document.body;
+
+            // Pega todos os paragrafos
+            var paragrafos = document.querySelectorAll("p");
+
+            if (tema == "claro") {
+
+                // Troca a cor de fundo.
+                body.style.backgroundColor = "black";
+
+                // Percorre todos os P da página e muda a cor do texto
+                paragrafos.forEach(function (paragrafo) {
+                    paragrafo.style.color = "white";
+                });
+                tema = "escuro";
+
+            } else {
+
+                // Troca a cor de fundo.
+                body.style.backgroundColor = "white";
+
+                // Percorre todos os P da página e muda a cor do texto
+                paragrafos.forEach(function (paragrafo) {
+                    paragrafo.style.color = "black";
+                });
+
+                tema = "claro";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
